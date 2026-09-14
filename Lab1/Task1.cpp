@@ -12,9 +12,17 @@ void printArray(int (&arr) [10]){
     }
 }
 
+void swapElements(int &element1, int &element2){
+    int temp = element1;
+    element1 = element2;
+    element2 = temp;
+}
+
 int main(){
     int arr[10]{};
     fillArray(arr);
+    printArray(arr);
+    swapElements(arr[0], arr[1]);
     printArray(arr);
     return 0;
 }
