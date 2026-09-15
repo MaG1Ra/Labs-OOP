@@ -22,10 +22,17 @@ int& getElement(SafeArray& arr, int index) {
     return arr.data[index];
 }
 
+void printSafe(const SafeArray& arr) {
+    for (int i = 0; i < arr.size; i++) {
+        std::cout << arr.data[i];
+    }
+}
+
 int main() {
     SafeArray MyArr;
     MyArr = createArray(5);
     getElement(MyArr, 2) = 999;
-    std::cout << MyArr.data[2];
+    std::cout << MyArr.data[2] << "\n";
+    printSafe(MyArr);
     return 0;
 }
