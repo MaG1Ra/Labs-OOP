@@ -13,7 +13,19 @@ SafeArray createArray(int size) {
     return sa;
 }
 
+int& getElement(SafeArray& arr, int index) {
+    static int error = -1;
+    if (index >= arr.size || index < 0) {
+        std::cout << "Error";
+        return error;
+    }
+    return arr.data[index];
+}
+
 int main() {
     SafeArray MyArr;
     MyArr = createArray(5);
+    getElement(MyArr, 2) = 999;
+    std::cout << MyArr.data[2];
+    return 0;
 }
