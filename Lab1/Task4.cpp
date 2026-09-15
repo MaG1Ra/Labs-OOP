@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 
 int** allocateMatrix(int rows, int cols) {
     int** matrix = new int*[rows]{};
@@ -49,10 +50,22 @@ void printMatrix(int** matrix, int rows, int cols, bool showBorders = true, std:
     }
 }
 
+void freeMatrix(int** matrix, int rows) {
+    for (int i = 0; i < rows; i++) {
+        delete[] matrix[i];
+    }
+    delete[] matrix;
+}
+
 int main() {
     int rows{4};
     int cols{4};
     int** Matrix{allocateMatrix(rows, cols)};
     fillMatrix(Matrix, rows, cols);
     printMatrix(Matrix, rows, cols, true, "Grades");
+    std::cout << "\n";
+    printMatrix(Matrix, rows, cols, false, "Grades");
+    std::cout << "\n";
+    printMatrix(Matrix, rows, cols);
+    freeMatrix(Matrix, rows);
 }
