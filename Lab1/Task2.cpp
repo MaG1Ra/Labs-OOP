@@ -24,4 +24,13 @@ int main() {
         std::cin >> arr[i];
     }
     process(arr, N);
+    delete[] arr;
+    arr = nullptr;
+    if (arr == nullptr) {
+        std::cout << "Error";
+    }
+    else {
+        std::cout << *arr;
+    }
+    return 0;
 }
