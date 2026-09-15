@@ -1,0 +1,116 @@
+\doxysection{Файл Task3.\+cpp}
+\hypertarget{_task3_8cpp}{}\label{_task3_8cpp}\index{Task3.cpp@{Task3.cpp}}
+{\ttfamily \+\#include $<$iostream$>$}\newline
+\doxysubsubsection*{Классы}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{struct_safe_array}{Safe\+Array}}
+\begin{DoxyCompactList}\small\item\em Структура безопасного динамического массива. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{struct_safe_array}{Safe\+Array}} \doxymbox{\hyperlink{_task3_8cpp_a7ff63be79ad745808c2835d23619453c}{create\+Array}} (int size)
+\begin{DoxyCompactList}\small\item\em Создаёт динамический массив определенного размера. \end{DoxyCompactList}\item 
+int \& \doxymbox{\hyperlink{_task3_8cpp_a96b5fa358374961176edf6d8e54cfe1d}{get\+Element}} (\doxymbox{\hyperlink{struct_safe_array}{Safe\+Array}} \&arr, int index)
+\begin{DoxyCompactList}\small\item\em Возвращает ссылку на элемент массива по индексу. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{_task3_8cpp_a7351a105bbeff3b7b137f744fb529256}{print\+Safe}} (const \doxymbox{\hyperlink{struct_safe_array}{Safe\+Array}} \&arr)
+\begin{DoxyCompactList}\small\item\em Выводит все элементы массива. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{_task3_8cpp_a515f98cc2f2e44911a28a7d73c4b9e83}{re\+Size\+Array}} (int N, int M, \doxymbox{\hyperlink{struct_safe_array}{Safe\+Array}} \&arr)
+\begin{DoxyCompactList}\small\item\em Изменяет размер динамического массива. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{_task3_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\begin{DoxyCompactList}\small\item\em Основная функция. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{_task3_8cpp_doc-func-members}
+\Hypertarget{_task3_8cpp_doc-func-members}
+\doxysubsection{Функции}
+\Hypertarget{_task3_8cpp_a7ff63be79ad745808c2835d23619453c}\index{Task3.cpp@{Task3.cpp}!createArray@{createArray}}
+\index{createArray@{createArray}!Task3.cpp@{Task3.cpp}}
+\doxysubsubsection{\texorpdfstring{createArray()}{createArray()}}
+{\footnotesize\ttfamily \label{_task3_8cpp_a7ff63be79ad745808c2835d23619453c} 
+\doxymbox{\hyperlink{struct_safe_array}{Safe\+Array}} create\+Array (\begin{DoxyParamCaption}\item[{int}]{size}{}\end{DoxyParamCaption})}
+
+
+
+Создаёт динамический массив определенного размера. 
+
+Выделяет память под массив и инициализирует все его элементы нулями.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em size} & Размер массива. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+\doxylink{struct_safe_array}{Safe\+Array} Структура с указателем на массив и его размер. 
+\end{DoxyReturn}
+\Hypertarget{_task3_8cpp_a96b5fa358374961176edf6d8e54cfe1d}\index{Task3.cpp@{Task3.cpp}!getElement@{getElement}}
+\index{getElement@{getElement}!Task3.cpp@{Task3.cpp}}
+\doxysubsubsection{\texorpdfstring{getElement()}{getElement()}}
+{\footnotesize\ttfamily \label{_task3_8cpp_a96b5fa358374961176edf6d8e54cfe1d} 
+int \& get\+Element (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_safe_array}{Safe\+Array}} \&}]{arr}{, }\item[{int}]{index}{}\end{DoxyParamCaption})}
+
+
+
+Возвращает ссылку на элемент массива по индексу. 
+
+Проверяет, находится ли индекс в допустимых пределах. Если индекс неправильный, выводит ошибку и возвращает ссылку на статическую переменную error.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em arr} & Ссылка на безопасный массив. \\
+\hline
+{\em index} & Индекс элемента массива. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+arr.\+data\+[index] Ссылка на найденный элемент или на переменную error 
+\end{DoxyReturn}
+\Hypertarget{_task3_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\index{Task3.cpp@{Task3.cpp}!main@{main}}
+\index{main@{main}!Task3.cpp@{Task3.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{_task3_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4} 
+int main (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Основная функция. 
+
+Создаёт безопасный массив, изменяет его элементы и размер, выводит содержимое массива и освобождает выделенную память. \Hypertarget{_task3_8cpp_a7351a105bbeff3b7b137f744fb529256}\index{Task3.cpp@{Task3.cpp}!printSafe@{printSafe}}
+\index{printSafe@{printSafe}!Task3.cpp@{Task3.cpp}}
+\doxysubsubsection{\texorpdfstring{printSafe()}{printSafe()}}
+{\footnotesize\ttfamily \label{_task3_8cpp_a7351a105bbeff3b7b137f744fb529256} 
+void print\+Safe (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{struct_safe_array}{Safe\+Array}} \&}]{arr}{}\end{DoxyParamCaption})}
+
+
+
+Выводит все элементы массива. 
+
+Элементы массива выводятся через разделитель \texorpdfstring{$\vert$}{|}.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em arr} & Константная ссылка на безопасный массив. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_task3_8cpp_a515f98cc2f2e44911a28a7d73c4b9e83}\index{Task3.cpp@{Task3.cpp}!reSizeArray@{reSizeArray}}
+\index{reSizeArray@{reSizeArray}!Task3.cpp@{Task3.cpp}}
+\doxysubsubsection{\texorpdfstring{reSizeArray()}{reSizeArray()}}
+{\footnotesize\ttfamily \label{_task3_8cpp_a515f98cc2f2e44911a28a7d73c4b9e83} 
+void re\+Size\+Array (\begin{DoxyParamCaption}\item[{int}]{N}{, }\item[{int}]{M}{, }\item[{\doxymbox{\hyperlink{struct_safe_array}{Safe\+Array}} \&}]{arr}{}\end{DoxyParamCaption})}
+
+
+
+Изменяет размер динамического массива. 
+
+Создаёт новый массив определенного размера, копирует в него элементы прошлого массива и освобождает старую память. При уменьшении размера выводит удаленные элементы.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em N} & Текущий размер массива. \\
+\hline
+{\em M} & Новый размер массива. \\
+\hline
+{\em arr} & Ссылка на безопасный массив. \\
+\hline
+\end{DoxyParams}

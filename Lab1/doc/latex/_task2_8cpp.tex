@@ -1,0 +1,44 @@
+\doxysection{Файл Task2.\+cpp}
+\hypertarget{_task2_8cpp}{}\label{_task2_8cpp}\index{Task2.cpp@{Task2.cpp}}
+{\ttfamily \+\#include $<$iostream$>$}\newline
+\doxysubsubsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{_task2_8cpp_ab2b08715df631b0fe6b472288cc7c47e}{process}} (int \texorpdfstring{$\ast$}{*}\&arr, int size)
+\begin{DoxyCompactList}\small\item\em Обрабатывает динамический массив до первого отрицательного элемента. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{_task2_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\begin{DoxyCompactList}\small\item\em Основная функция. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{_task2_8cpp_doc-func-members}
+\Hypertarget{_task2_8cpp_doc-func-members}
+\doxysubsection{Функции}
+\Hypertarget{_task2_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\index{Task2.cpp@{Task2.cpp}!main@{main}}
+\index{main@{main}!Task2.cpp@{Task2.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{_task2_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4} 
+int main (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Основная функция. 
+
+Считывает размер массива и его элементы, передаёт массив в \doxylink{_task2_8cpp_ab2b08715df631b0fe6b472288cc7c47e}{process()}, после чего освобождает выделенную память. Потом проверяет память. \Hypertarget{_task2_8cpp_ab2b08715df631b0fe6b472288cc7c47e}\index{Task2.cpp@{Task2.cpp}!process@{process}}
+\index{process@{process}!Task2.cpp@{Task2.cpp}}
+\doxysubsubsection{\texorpdfstring{process()}{process()}}
+{\footnotesize\ttfamily \label{_task2_8cpp_ab2b08715df631b0fe6b472288cc7c47e} 
+void process (\begin{DoxyParamCaption}\item[{int \texorpdfstring{$\ast$}{*}\&}]{arr}{, }\item[{int}]{size}{}\end{DoxyParamCaption})}
+
+
+
+Обрабатывает динамический массив до первого отрицательного элемента. 
+
+Функция ищет первый отрицательный элемент в массиве, затем если отрицательный элемент найден, создаётся новый массив, в котором находятся элементы до отрицательного, Старый массив освобождается, а указатель arr переходит на новый массив.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em arr} & Ссылка на указатель на динамический массив целых чисел. \\
+\hline
+{\em size} & Размер массива. \\
+\hline
+\end{DoxyParams}
