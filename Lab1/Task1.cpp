@@ -1,4 +1,5 @@
 #include <iostream>
+#include <windows.h>
 
 /**
  * @brief Заполняет массив.
@@ -65,11 +66,20 @@ void multiplyByTwo(int (&arr)[10]){
  * а в конце умножает все элементы на 2.
  *
  */
+
 int main(){
+    SetConsoleOutputCP(CP_UTF8);
+    SetConsoleCP(CP_UTF8);
     int arr[10]{};
+    int o{};
+    int p{};
     fillArray(arr);
     printArray(arr);
-    swapElements(arr[0], arr[1]);
+    std::cout << "Ввести первый элемент для замены: ";
+    std::cin >> o;
+    std::cout << "Ввести второй элемент для замены: ";
+    std::cin >> p;
+    swapElements(arr[o], arr[p]);
     printArray(arr);
     multiplyByTwo(arr);
     printArray(arr);
