@@ -64,7 +64,7 @@ void Student::birthday() {
     age++;
     if (age > 100) {
         age = 100;
-        std::cerr << "Error invalid age";
+        std::cout << "\033[31m!!!Error invalid age!!!\n\033[0m";
     }
 }
 
@@ -72,14 +72,21 @@ void Student::nextCourse() {
     course++;
     if (course > 6) {
         course = 6;
-        std::cerr << "Error invalid course";
+        std::cout << "\033[31m!!!Error invalid course!!!\n\033[0m";
     }
 }
 
 void Student::changeGrade(double new_grade) {
     if (new_grade < 0 || new_grade > 5) {
-        std::cerr << "Error invalid grade";
+        std::cout << "\033[31m!!!Error invalid grade!!!\n\033[0m";
         return;
     }
     avg_grade = new_grade;
+}
+
+void Student::print() const {
+    std::cout << "Name: " << name << "\n";
+    std::cout << "Age: " << age << "\n";
+    std::cout << "Avg grade: " << avg_grade << "\n";
+    std::cout << "Course: " << course << "\n";
 }

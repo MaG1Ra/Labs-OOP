@@ -23,5 +23,6 @@ public:
     void birthday();
     void nextCourse();
     void changeGrade(double new_grade);
+    void print() const;
 };
 #endif
