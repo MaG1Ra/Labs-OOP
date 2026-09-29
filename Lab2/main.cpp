@@ -1,0 +1,50 @@
+#include "Student.h"
+
+int main() {
+    std::cout << "Создание объектов класса\n";
+    Student student;
+    std::string name = "Саня";
+    std::string name1 = "Вовка";
+    Student student1(name, 18, 1, 3.5);
+    Student student2(student1);
+    std::cout << "Вывод начального состояния\n";
+    student1.print();
+    std::cout << "\n";
+    student2.print();
+    std::cout << "\n";
+    student.print();
+    std::cout << "\nВыполнение корректных операций\n";
+    student1.birthday();
+    student1.changeGrade(4.5);
+    student1.nextCourse();
+    student1.print();
+    std::cout << "\n";
+    student2.print();
+    std::cout << "\nВыполнение некорректных операций\n";
+    Student student3(name1, 100, 6, 5);
+    student3.print();
+    student3.birthday();
+    student3.changeGrade(6);
+    student3.nextCourse();
+    student3.print();
+    std::cout << "\nПовторный вывод состояния\n";
+    student1.print();
+    std::cout << "\n";
+    student2.print();
+    std::cout << "\n";
+    student3.print();
+    std::cout << "\nПроверка независимости объектов\n";
+    student1.print();
+    std::cout << "\n";
+    student2.print();
+    std::cout << "\n";
+    student1.birthday();
+    student1.changeGrade(4.3);
+    student1.nextCourse();
+    student1.print();
+    std::cout << "\n";
+    student2.print();
+    std::cout << Student::counter << "\n";
+    system("pause");
+    return 0;
+}
