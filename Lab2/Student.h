@@ -14,5 +14,10 @@ public:
     Student(const Student &other);
 
     ~Student();
+
+    std::string getName() const;
+    int getAge() const;
+    double getAvgGrade() const;
+    int getCourse() const;
 };
 #endif

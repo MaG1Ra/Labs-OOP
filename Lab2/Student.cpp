@@ -43,3 +43,19 @@ Student::~Student() {
     std::cout << "\nDestructor";
     counter--;
 }
+
+std::string Student::getName() const {
+    return name;
+}
+
+int Student::getAge() const {
+    return age;
+}
+
+int Student::getCourse() const {
+    return course;
+}
+
+double Student::getAvgGrade() const {
+    return avg_grade;
+}
