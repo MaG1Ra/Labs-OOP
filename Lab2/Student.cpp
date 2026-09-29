@@ -59,3 +59,27 @@ int Student::getCourse() const {
 double Student::getAvgGrade() const {
     return avg_grade;
 }
+
+void Student::birthday() {
+    age++;
+    if (age > 100) {
+        age = 100;
+        std::cerr << "Error invalid age";
+    }
+}
+
+void Student::nextCourse() {
+    course++;
+    if (course > 6) {
+        course = 6;
+        std::cerr << "Error invalid course";
+    }
+}
+
+void Student::changeGrade(double new_grade) {
+    if (new_grade < 0 || new_grade > 5) {
+        std::cerr << "Error invalid grade";
+        return;
+    }
+    avg_grade = new_grade;
+}

@@ -19,5 +19,9 @@ public:
     int getAge() const;
     double getAvgGrade() const;
     int getCourse() const;
+
+    void birthday();
+    void nextCourse();
+    void changeGrade(double new_grade);
 };
 #endif
