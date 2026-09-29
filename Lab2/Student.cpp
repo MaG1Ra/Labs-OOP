@@ -1,5 +1,8 @@
+/// @file Student.cpp
+/// @brief Реализация класса Student
 #include "Student.h"
 
+/// Инициализация статического счётчика
 int Student::counter = 0;
 
 Student::Student() {
