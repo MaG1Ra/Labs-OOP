@@ -5,20 +5,32 @@
 /// Инициализация статического счётчика
 int Student::counter = 0;
 
-Student::Student() {
-    name = "Unknown";
+FullName::FullName(std::string name_, std::string surname_, std::string patronymic_) :
+name(name_), surname(surname_), patronymic(patronymic_) {
+    if (name.empty()) {
+        name = "Unknown";
+        std::cout << "Error empty name";
+    }
+    if (surname.empty()) {
+        surname = "Unknown";
+        std::cout << "Error empty surname";
+    }
+    if (patronymic.empty()) {
+        patronymic = "Unknown";
+        std::cout << "Error empty patronymic";
+    }
+}
+
+Student::Student() : full_name("Unknown", "Unknown", "Unknown") {
+
     age = 18;
     course = 1;
     avg_grade = 0;
     counter++;
 }
 
-Student::Student(std::string& name_, int age_, int course_, double avg_grade_) :
-name(name_), age(age_), course(course_), avg_grade(avg_grade_) {
-    if (name.empty()) {
-        name = "Unknown";
-        std::cerr << "Error empty name";
-    }
+Student::Student(FullName fullname_, int age_, int course_, double avg_grade_) :
+full_name(fullname_), age(age_), course(course_), avg_grade(avg_grade_) {
     if ( 16 > age || age > 100 ) {
         age = 18;
         std::cerr << "Error invalid age";
@@ -34,8 +46,7 @@ name(name_), age(age_), course(course_), avg_grade(avg_grade_) {
     counter++;
 }
 
-Student::Student(const Student &other) {
-    name = other.name;
+Student::Student(const Student &other) : full_name(other.full_name) {
     age = other.age;
     course = other.course;
     avg_grade = other.avg_grade;
@@ -47,8 +58,8 @@ Student::~Student() {
     counter--;
 }
 
-std::string Student::getName() const {
-    return name;
+std::string FullName::getFullName() const {
+    return name + " " + surname + " " + patronymic;
 }
 
 int Student::getAge() const {
@@ -88,7 +99,7 @@ void Student::changeGrade(double new_grade) {
 }
 
 void Student::print() const {
-    std::cout << "Name: " << name << "\n";
+    std::cout << "Full name: " << full_name.getFullName() << "\n";
     std::cout << "Age: " << age << "\n";
     std::cout << "Avg grade: " << avg_grade << "\n";
     std::cout << "Course: " << course << "\n";

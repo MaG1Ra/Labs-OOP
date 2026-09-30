@@ -18,9 +18,19 @@
  * @note Класс содержит статический счётчик для отслеживания активных объектов.
  * @version 1.0
  */
+class FullName {
+    std::string name;
+    std::string surname;
+    std::string patronymic;
+    public:
+    FullName(std::string name_, std::string surname_, std::string patronymic_);
+
+    std::string getFullName() const;
+};
+
 class Student {
     /// Имя студента
-    std::string name;
+    FullName full_name;
     /// Возраст студента
     int age;
     /// Курс студента
@@ -41,8 +51,8 @@ public:
      * @param avg_grade_ Оценка (если не [0,5] -> 0)
      * @warning При некорректных данных выводится ошибка и устанавливаются дефолты
      * @post counter++
-     */
-    Student(std::string& name_, int age_, int course_, double avg_grade_);
+    */
+    Student(FullName fullname_, int age_, int course_, double avg_grade_);
 
     /**
      * @brief Конструктор копирования
@@ -53,9 +63,6 @@ public:
 
     /// @brief Деструктор (counter--)
     ~Student();
-
-    /// @brief Получить имя @return Имя студента
-    std::string getName() const;
 
     /// @brief Получить возраст @return Возраст в годах
     int getAge() const;

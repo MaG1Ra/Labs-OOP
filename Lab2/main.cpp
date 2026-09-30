@@ -27,9 +27,7 @@
 int main() {
     std::cout << "Creating class objects\n";
     Student student;
-    std::string name = "Sanya";
-    std::string name1 = "Vovka";
-    Student student1(name, 18, 1, 3.5);
+    Student student1({"Sanya", "Papirys", "Olegovich"}, 18, 1, 3.5);
     Student student2(student1);
     std::cout << "Initial state output\n";
     student1.print();
@@ -45,7 +43,7 @@ int main() {
     std::cout << "\n";
     student2.print();
     std::cout << "\nPerforming incorrect operations\n";
-    Student student3(name1, 100, 6, 5);
+    Student student3({"Vovka", "Brigada", "Olegovich"}, 100, 6, 5);
     student3.print();
     student3.birthday();
     student3.changeGrade(6);
