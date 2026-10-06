@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['name_0',['name',['../class_student.html#a9aeb48a925f370292564def17482f0ec',1,'Student']]]
+  ['full_5fname_0',['full_name',['../class_student.html#a84251180f313a6ec1b48d0214a7b7564',1,'Student']]]
 ];

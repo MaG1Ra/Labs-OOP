@@ -1,0 +1,292 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Лабораторная работа №2: Класс FullName</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Лабораторная работа №2
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Поиск" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('class_full_name.html','','class_full_name-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Класс FullName</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Класс для хранения инициалов.  
+ <a href="#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_student_8h_source.html">Student.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a0aa1993fdd61654b9a0528649cf0e87b" id="r_a0aa1993fdd61654b9a0528649cf0e87b"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a0aa1993fdd61654b9a0528649cf0e87b">FullName</a> (std::string name_, std::string surname_, std::string patronymic_)</td></tr>
+<tr class="memdesc:a0aa1993fdd61654b9a0528649cf0e87b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Конструктор полного имени.  <br /></td></tr>
+<tr class="memitem:a3c0c62de0afcc8632b3cacc7f828ccf2" id="r_a3c0c62de0afcc8632b3cacc7f828ccf2"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="#a3c0c62de0afcc8632b3cacc7f828ccf2">getFullName</a> () const</td></tr>
+<tr class="memdesc:a3c0c62de0afcc8632b3cacc7f828ccf2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получить полное имя.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Закрытые данные</h2></td></tr>
+<tr class="memitem:a6a591c594b98cc6c20e7e8e10ae5d253" id="r_a6a591c594b98cc6c20e7e8e10ae5d253"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="#a6a591c594b98cc6c20e7e8e10ae5d253">name</a></td></tr>
+<tr class="memdesc:a6a591c594b98cc6c20e7e8e10ae5d253"><td class="mdescLeft">&#160;</td><td class="mdescRight">Имя студента  <br /></td></tr>
+<tr class="memitem:a0f23800f72aac368c55b8b4167b5f344" id="r_a0f23800f72aac368c55b8b4167b5f344"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="#a0f23800f72aac368c55b8b4167b5f344">surname</a></td></tr>
+<tr class="memdesc:a0f23800f72aac368c55b8b4167b5f344"><td class="mdescLeft">&#160;</td><td class="mdescRight">Фамилия студента  <br /></td></tr>
+<tr class="memitem:ab6e2e1e7bda7335f5f959ee47510a4bd" id="r_ab6e2e1e7bda7335f5f959ee47510a4bd"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="#ab6e2e1e7bda7335f5f959ee47510a4bd">patronymic</a></td></tr>
+<tr class="memdesc:ab6e2e1e7bda7335f5f959ee47510a4bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Отчество студента  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Класс для хранения инициалов. </p>
+<p>Класс содержит поля с фамилией, именем и отчеством и позволяет получить имя целиком одной строкой. </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Конструктор(ы)</h2>
+<a id="a0aa1993fdd61654b9a0528649cf0e87b" name="a0aa1993fdd61654b9a0528649cf0e87b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0aa1993fdd61654b9a0528649cf0e87b">&#9670;&#160;</a></span>FullName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FullName::FullName </td>
+          <td>(</td>
+          <td class="paramtype">std::string</td>          <td class="paramname"><span class="paramname"><em>name_</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string</td>          <td class="paramname"><span class="paramname"><em>surname_</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string</td>          <td class="paramname"><span class="paramname"><em>patronymic_</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Конструктор полного имени. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name_</td><td>Имя </td></tr>
+    <tr><td class="paramname">surname_</td><td>Фамилия </td></tr>
+    <tr><td class="paramname">patronymic_</td><td>Отчество </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Методы</h2>
+<a id="a3c0c62de0afcc8632b3cacc7f828ccf2" name="a3c0c62de0afcc8632b3cacc7f828ccf2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c0c62de0afcc8632b3cacc7f828ccf2">&#9670;&#160;</a></span>getFullName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string FullName::getFullName </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Получить полное имя. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Полное имя в виде строки </dd></dl>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Данные класса</h2>
+<a id="a6a591c594b98cc6c20e7e8e10ae5d253" name="a6a591c594b98cc6c20e7e8e10ae5d253"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a591c594b98cc6c20e7e8e10ae5d253">&#9670;&#160;</a></span>name</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string FullName::name</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Имя студента </p>
+
+</div>
+</div>
+<a id="ab6e2e1e7bda7335f5f959ee47510a4bd" name="ab6e2e1e7bda7335f5f959ee47510a4bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6e2e1e7bda7335f5f959ee47510a4bd">&#9670;&#160;</a></span>patronymic</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string FullName::patronymic</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Отчество студента </p>
+
+</div>
+</div>
+<a id="a0f23800f72aac368c55b8b4167b5f344" name="a0f23800f72aac368c55b8b4167b5f344"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f23800f72aac368c55b8b4167b5f344">&#9670;&#160;</a></span>surname</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string FullName::surname</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Фамилия студента </p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li><a class="el" href="_student_8h_source.html">Student.h</a></li>
+<li><a class="el" href="_student_8cpp.html">Student.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="class_full_name.html">FullName</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

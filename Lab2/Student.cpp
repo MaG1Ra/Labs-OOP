@@ -33,15 +33,15 @@ Student::Student(FullName fullname_, int age_, int course_, double avg_grade_) :
 full_name(fullname_), age(age_), course(course_), avg_grade(avg_grade_) {
     if ( 16 > age || age > 100 ) {
         age = 18;
-        std::cerr << "Error invalid age";
+        std::cout << "Error invalid age!";
     }
     if ( 0 > course || course > 6 ) {
         course = 1;
-        std::cerr << "Error invalid course";
+        std::cout << "Error invalid course!";
     }
     if ( 0 > avg_grade || avg_grade > 5) {
         avg_grade = 0;
-        std::cerr << "Error invalid avg_grade";
+        std::cout << "Error invalid avg_grade!";
     }
     counter++;
 }
@@ -78,7 +78,7 @@ void Student::birthday() {
     age++;
     if (age > 100) {
         age = 100;
-        std::cout << "\033[31m!!!Error invalid age!!!\n\033[0m";
+        std::cout << "Error invalid age!\n";
     }
 }
 
@@ -86,13 +86,13 @@ void Student::nextCourse() {
     course++;
     if (course > 6) {
         course = 6;
-        std::cout << "\033[31m!!!Error invalid course!!!\n\033[0m";
+        std::cout << "Error invalid course!\n";
     }
 }
 
 void Student::changeGrade(double new_grade) {
     if (new_grade < 0 || new_grade > 5) {
-        std::cout << "\033[31m!!!Error invalid grade!!!\n\033[0m";
+        std::cout << "Error invalid grade!\n";
         return;
     }
     avg_grade = new_grade;

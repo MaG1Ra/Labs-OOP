@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['print_0',['print',['../class_student.html#abdbb14cd83ef23c09f811bd1e30ddd4f',1,'Student']]]
+  ['nextcourse_0',['nextCourse',['../class_student.html#a80878962e3e0e749ab58eae175f32678',1,'Student']]]
 ];

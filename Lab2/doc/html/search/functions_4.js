@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['nextcourse_0',['nextCourse',['../class_student.html#a80878962e3e0e749ab58eae175f32678',1,'Student']]]
+  ['main_0',['main',['../main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main.cpp']]]
 ];

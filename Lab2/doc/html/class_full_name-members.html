@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', codefold.init);
   </div>
 </div>
 <script type="text/javascript">
-document.addEventListener('DOMContentLoaded',() => { initNavTree('class_student.html','',''); });
+document.addEventListener('DOMContentLoaded',() => { initNavTree('class_full_name.html','',''); });
 </script>
 <div id="container">
 <div id="doc-content">
@@ -108,28 +108,17 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('class_student.
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">Student Список членов класса</div></div>
+  <div class="headertitle"><div class="title">FullName Список членов класса</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Полный список членов класса <a class="el" href="class_student.html">Student</a>, включая наследуемые из базового класса</p>
+<p>Полный список членов класса <a class="el" href="class_full_name.html">FullName</a>, включая наследуемые из базового класса</p>
 <table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="class_student.html#a552a431a43ffc545d180424597d51f97">age</a></td><td class="entry"><a class="el" href="class_student.html">Student</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="class_student.html#ae890212c6964df4eba7dd6f25e42cd99">avg_grade</a></td><td class="entry"><a class="el" href="class_student.html">Student</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_student.html#abd8a8de8f59eb7141a78bcecd01c1f2c">birthday</a>()</td><td class="entry"><a class="el" href="class_student.html">Student</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="class_student.html#a705880518606c96d3365584c4cee7cef">changeGrade</a>(double new_grade)</td><td class="entry"><a class="el" href="class_student.html">Student</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_student.html#afb3c5ca7343163a553d6f30414f8757e">counter</a></td><td class="entry"><a class="el" href="class_student.html">Student</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="class_student.html#afe0fdedc7c7c0aea9763fc2060858158">course</a></td><td class="entry"><a class="el" href="class_student.html">Student</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_student.html#a84251180f313a6ec1b48d0214a7b7564">full_name</a></td><td class="entry"><a class="el" href="class_student.html">Student</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="class_student.html#af815bffcccc0b1d0b4413ae70f7a4d11">getAge</a>() const</td><td class="entry"><a class="el" href="class_student.html">Student</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_student.html#a44846b4e61b3424f590b3eae4d0c58b0">getAvgGrade</a>() const</td><td class="entry"><a class="el" href="class_student.html">Student</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="class_student.html#a7ca1414a43b0c0194defe9a7929567a2">getCourse</a>() const</td><td class="entry"><a class="el" href="class_student.html">Student</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_student.html#a80878962e3e0e749ab58eae175f32678">nextCourse</a>()</td><td class="entry"><a class="el" href="class_student.html">Student</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="class_student.html#abdbb14cd83ef23c09f811bd1e30ddd4f">print</a>() const</td><td class="entry"><a class="el" href="class_student.html">Student</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_student.html#af9168cedbfa5565cf0b20c1a9d3f5c9d">Student</a>()</td><td class="entry"><a class="el" href="class_student.html">Student</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="class_student.html#a89f9e10e37868ec4e7cfe391ff7f7ca7">Student</a>(FullName fullname_, int age_, int course_, double avg_grade_)</td><td class="entry"><a class="el" href="class_student.html">Student</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_student.html#a05b37ffb050ddb039db63a8764d790cb">Student</a>(const Student &amp;other)</td><td class="entry"><a class="el" href="class_student.html">Student</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="class_student.html#a54a8ea060d6cd04222c3a2f89829f105">~Student</a>()</td><td class="entry"><a class="el" href="class_student.html">Student</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_full_name.html#a0aa1993fdd61654b9a0528649cf0e87b">FullName</a>(std::string name_, std::string surname_, std::string patronymic_)</td><td class="entry"><a class="el" href="class_full_name.html">FullName</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_full_name.html#a3c0c62de0afcc8632b3cacc7f828ccf2">getFullName</a>() const</td><td class="entry"><a class="el" href="class_full_name.html">FullName</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_full_name.html#a6a591c594b98cc6c20e7e8e10ae5d253">name</a></td><td class="entry"><a class="el" href="class_full_name.html">FullName</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_full_name.html#ab6e2e1e7bda7335f5f959ee47510a4bd">patronymic</a></td><td class="entry"><a class="el" href="class_full_name.html">FullName</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_full_name.html#a0f23800f72aac368c55b8b4167b5f344">surname</a></td><td class="entry"><a class="el" href="class_full_name.html">FullName</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
 </table></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->

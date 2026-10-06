@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['getage_0',['getAge',['../class_student.html#af815bffcccc0b1d0b4413ae70f7a4d11',1,'Student']]],
-  ['getavggrade_1',['getAvgGrade',['../class_student.html#a44846b4e61b3424f590b3eae4d0c58b0',1,'Student']]],
-  ['getcourse_2',['getCourse',['../class_student.html#a7ca1414a43b0c0194defe9a7929567a2',1,'Student']]],
-  ['getname_3',['getName',['../class_student.html#af2b671e64af8a240f59652414a8b8047',1,'Student']]]
+  ['full_5fname_0',['full_name',['../class_student.html#a84251180f313a6ec1b48d0214a7b7564',1,'Student']]],
+  ['fullname_1',['FullName',['../class_full_name.html',1,'FullName'],['../class_full_name.html#a0aa1993fdd61654b9a0528649cf0e87b',1,'FullName::FullName()']]]
 ];
