@@ -112,5 +112,21 @@ int main() {
     std::cout << "color1 != same: " << (color1 != same) << "\n";
     std::cout << "dark == light: " << (dark == light) << "\n";
     std::cout << "dark != light: " << (dark != light) << "\n\n";
+
+    std::cout << "7. Демонстрация работы explicit\n";
+    RGBColor good(10, 20, 30);
+    good.print();
+    // RGBColor bad = {10, 20, 30};
+    // bad.print();
+    std::cout << "(неявные формы RGBColor ... = {...} не компилируются)\n\n";
+
+    std::cout << "8. Демонстрация работы mutable\n";
+    const RGBColor constColor(120, 130, 140);
+    std::cout << "req_counter до: " << constColor.getReqCounter() << "\n";
+    bool r1 = constColor > dark;
+    bool r2 = constColor >= dark;
+    bool r3 = constColor != light;
+    std::cout << "результаты: " << r1 << " " << r2 << " " << r3 << "\n";
+    std::cout << "req_counter после: " << constColor.getReqCounter() << " изменён у const-объекта\n\n";
     return 0;
 }

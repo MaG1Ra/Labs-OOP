@@ -7,9 +7,10 @@ class RGBColor {
     static int counter;
     unsigned char clamp(int value);
     double luminance() const;
+    mutable int req_counter = 0;
 public:
     RGBColor();
-    RGBColor(unsigned char red_, unsigned char green_, unsigned char blue_);
+    explicit RGBColor(unsigned char red_, unsigned char green_, unsigned char blue_);
     RGBColor(const RGBColor& other);
 
     ~RGBColor();
@@ -41,5 +42,6 @@ public:
     unsigned char getRGBColorBlue() const;
     void print() const;
     static int getCounter();
+    int getReqCounter() const;
 };
 #endif //OOP_RGBCOLOR_H
