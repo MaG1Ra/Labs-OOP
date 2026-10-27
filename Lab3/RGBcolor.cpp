@@ -1,17 +1,26 @@
 #include "RGBColor.h"
 #include <iostream>
 
+int RGBColor::counter = 0;
+
 RGBColor::RGBColor() {
+    counter++;
 }
 
 RGBColor::RGBColor(unsigned char red_, unsigned char green_, unsigned char blue_) :
 red(red_), green(green_), blue(blue_) {
+    counter++;
 }
 
 RGBColor::RGBColor(const RGBColor& other) {
     red = other.red;
     green = other.green;
     blue = other.blue;
+    counter++;
+}
+
+RGBColor::~RGBColor() {
+    counter--;
 }
 
 unsigned char RGBColor::getRGBColorRed() const {
@@ -24,6 +33,10 @@ unsigned char RGBColor::getRGBColorGreen() const {
 
 unsigned char RGBColor::getRGBColorBlue() const {
     return blue;
+}
+
+int RGBColor::getCounter() {
+    return counter;
 }
 
 void RGBColor::print() const {
