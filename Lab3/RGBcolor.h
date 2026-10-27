@@ -5,12 +5,18 @@ class RGBColor {
     unsigned char green = 0;
     unsigned char blue = 0;
     static int counter;
+    unsigned char clamp(int value);
 public:
     RGBColor();
     RGBColor(unsigned char red_, unsigned char green_, unsigned char blue_);
     RGBColor(const RGBColor& other);
 
     ~RGBColor();
+
+    RGBColor& operator++();
+    RGBColor operator++(int);
+    RGBColor& operator--();
+    RGBColor operator--(int);
 
     unsigned char getRGBColorRed() const;
     unsigned char getRGBColorGreen() const;

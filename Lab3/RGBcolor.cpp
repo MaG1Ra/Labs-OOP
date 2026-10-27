@@ -23,6 +23,16 @@ RGBColor::~RGBColor() {
     counter--;
 }
 
+unsigned char RGBColor::clamp(int value) {
+    if (value < 0) {
+        return 0;
+    }
+    if (value > 255) {
+        return 255;
+    }
+    return static_cast<unsigned char>(value);
+}
+
 unsigned char RGBColor::getRGBColorRed() const {
     return red;
 }
@@ -41,4 +51,34 @@ int RGBColor::getCounter() {
 
 void RGBColor::print() const {
     std::cout << "RGB (" << static_cast<int>(red) << ", " << static_cast<int>(green) << ", " << static_cast<int>(blue) << ")\n";
+}
+
+RGBColor& RGBColor::operator++() {
+    red = clamp(red +1);
+    green = clamp(green +1);
+    blue = clamp(blue +1);
+    return *this;
+}
+
+RGBColor RGBColor::operator++(int) {
+    RGBColor old = *this;
+    red = clamp(red +1);
+    green = clamp(green +1);
+    blue = clamp(blue +1);
+    return old;
+}
+
+RGBColor& RGBColor::operator--() {
+    red = clamp(red - 1);
+    green = clamp(green - 1);
+    blue = clamp(blue - 1);
+    return *this;
+}
+
+RGBColor RGBColor::operator--(int) {
+    RGBColor old = *this;
+    red = clamp(red - 1);
+    green = clamp(green - 1);
+    blue = clamp(blue - 1);
+    return old;
 }

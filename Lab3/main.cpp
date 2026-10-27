@@ -18,7 +18,36 @@ int main() {
         RGBColor tmp2(4, 5, 6);
         std::cout << "После создания 2 объектов в блоке: " << RGBColor::getCounter() << "\n";
     }
-    std::cout << "После выхода из блока работает деструктор: " << RGBColor::getCounter() << "\n";
+    std::cout << "После выхода из блока работает деструктор: " << RGBColor::getCounter() << "\n\n";
 
+    std::cout << "3. Унарные операции\n";
+    RGBColor color3(10, 20, 30);
+    std::cout << "start:  ";
+    color3.print();
+    ++color3;
+    std::cout << "++color3:    ";
+    color3.print();
+    RGBColor old = color3++;
+    std::cout << "color3++ -> новый: ";
+    color3.print();
+    std::cout << "color3++ -> старый: ";
+    old.print();
+    --color3;
+    std::cout << "--color3:    ";
+    color3.print();
+    old = color3--;
+    std::cout << "color3-- -> новый: ";
+    color3.print();
+    std::cout << "color3-- -> старый: ";
+    old.print();
+    RGBColor hi(255, 255, 255);
+    RGBColor lo(0, 0, 0);
+    ++hi;
+    std::cout << "++ на 255: ";
+    hi.print();
+    --lo;
+    std::cout << "-- на 0: ";
+    lo.print();
+    std::cout << "\n";
     return 0;
 }
