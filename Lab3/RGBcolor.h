@@ -6,6 +6,7 @@ class RGBColor {
     unsigned char blue = 0;
     static int counter;
     unsigned char clamp(int value);
+    double luminance() const;
 public:
     RGBColor();
     RGBColor(unsigned char red_, unsigned char green_, unsigned char blue_);
@@ -27,6 +28,13 @@ public:
     friend RGBColor operator-(RGBColor lhs, const RGBColor& rhs);
     friend RGBColor operator*(RGBColor lhs, const RGBColor& rhs);
     friend RGBColor operator/(RGBColor lhs, const RGBColor& rhs);
+
+    bool operator<(const RGBColor& rhs) const;
+    bool operator>(const RGBColor& rhs) const;
+    bool operator<=(const RGBColor& rhs) const;
+    bool operator>=(const RGBColor& rhs) const;
+    bool operator==(const RGBColor& rhs) const;
+    bool operator!=(const RGBColor& rhs) const;
 
     unsigned char getRGBColorRed() const;
     unsigned char getRGBColorGreen() const;

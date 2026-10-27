@@ -100,5 +100,17 @@ int main() {
     std::cout << "10 - 250 = 0: ";
     (dark - light).print();
     std::cout << "\n";
+
+    std::cout << "6. Сравнение по яркости\n";
+    RGBColor same(color1);
+    std::cout << std::boolalpha;
+    std::cout << "dark < light: " << (dark < light) << "\n";
+    std::cout << "dark > light: " << (dark > light) << "\n";
+    std::cout << "dark <= light:" << (dark <= light) << "\n";
+    std::cout << "dark >= light: " << (dark >= light) << "\n";
+    std::cout << "color1 == same: " << (color1 == same) << "\n";
+    std::cout << "color1 != same: " << (color1 != same) << "\n";
+    std::cout << "dark == light: " << (dark == light) << "\n";
+    std::cout << "dark != light: " << (dark != light) << "\n\n";
     return 0;
 }

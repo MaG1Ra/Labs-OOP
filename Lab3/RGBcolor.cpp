@@ -33,6 +33,10 @@ unsigned char RGBColor::clamp(int value) {
     return static_cast<unsigned char>(value);
 }
 
+double RGBColor::luminance() const {
+    return 0.2126f * red + 0.7152f * green + 0.0722f * blue;
+}
+
 unsigned char RGBColor::getRGBColorRed() const {
     return red;
 }
@@ -129,4 +133,28 @@ RGBColor operator*(RGBColor lhs, const RGBColor& rhs) {
 RGBColor operator/(RGBColor lhs, const RGBColor& rhs) {
     lhs /= rhs;
     return lhs;
+}
+
+bool RGBColor::operator<(const RGBColor& rhs) const {
+    return luminance() < rhs.luminance();
+}
+
+bool RGBColor::operator>(const RGBColor& rhs) const {
+    return luminance() > rhs.luminance();
+}
+
+bool RGBColor::operator<=(const RGBColor& rhs) const {
+    return luminance() <= rhs.luminance();
+}
+
+bool RGBColor::operator>=(const RGBColor& rhs) const {
+    return luminance() >= rhs.luminance();
+}
+
+bool RGBColor::operator==(const RGBColor& rhs) const {
+    return luminance() == rhs.luminance();
+}
+
+bool RGBColor::operator!=(const RGBColor& rhs) const {
+    return luminance() != rhs.luminance();
 }
