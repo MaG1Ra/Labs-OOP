@@ -23,6 +23,11 @@ public:
     RGBColor& operator*=(const RGBColor& rhs);
     RGBColor& operator/=(const RGBColor& rhs);
 
+    friend RGBColor operator+(RGBColor lhs, const RGBColor& rhs);
+    friend RGBColor operator-(RGBColor lhs, const RGBColor& rhs);
+    friend RGBColor operator*(RGBColor lhs, const RGBColor& rhs);
+    friend RGBColor operator/(RGBColor lhs, const RGBColor& rhs);
+
     unsigned char getRGBColorRed() const;
     unsigned char getRGBColorGreen() const;
     unsigned char getRGBColorBlue() const;

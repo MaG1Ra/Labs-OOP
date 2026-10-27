@@ -110,3 +110,23 @@ RGBColor& RGBColor::operator/=(const RGBColor& rhs) {
     blue = rhs.blue ? clamp(blue * 255 / rhs.blue) : 255;
     return *this;
 }
+
+RGBColor operator+(RGBColor lhs, const RGBColor& rhs) {
+    lhs += rhs;
+    return lhs;
+}
+
+RGBColor operator-(RGBColor lhs, const RGBColor& rhs) {
+    lhs -= rhs;
+    return lhs;
+}
+
+RGBColor operator*(RGBColor lhs, const RGBColor& rhs) {
+    lhs *= rhs;
+    return lhs;
+}
+
+RGBColor operator/(RGBColor lhs, const RGBColor& rhs) {
+    lhs /= rhs;
+    return lhs;
+}
