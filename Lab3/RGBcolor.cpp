@@ -82,3 +82,31 @@ RGBColor RGBColor::operator--(int) {
     blue = clamp(blue - 1);
     return old;
 }
+
+RGBColor& RGBColor::operator+=(const RGBColor& rhs) {
+    red = clamp(static_cast<int>(red) + rhs.red);
+    green = clamp(static_cast<int>(green) + rhs.green);
+    blue = clamp(static_cast<int>(blue) + rhs.blue);
+    return *this;
+}
+
+RGBColor& RGBColor::operator-=(const RGBColor& rhs) {
+    red = clamp(static_cast<int>(red) - rhs.red);
+    green = clamp(static_cast<int>(green) - rhs.green);
+    blue = clamp(static_cast<int>(blue) - rhs.blue);
+    return *this;
+}
+
+RGBColor& RGBColor::operator*=(const RGBColor& rhs) {
+    red = clamp(static_cast<int>(red) * rhs.red / 255);
+    green = clamp(static_cast<int>(green) * rhs.green / 255);
+    blue = clamp(static_cast<int>(blue) * rhs.blue / 255);
+    return *this;
+}
+
+RGBColor& RGBColor::operator/=(const RGBColor& rhs) {
+    red = rhs.red ? clamp(red * 255 / rhs.red) : 255;
+    green = rhs.green ? clamp(green * 255 / rhs.green) : 255;
+    blue = rhs.blue ? clamp(blue * 255 / rhs.blue) : 255;
+    return *this;
+}

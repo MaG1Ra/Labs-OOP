@@ -49,5 +49,34 @@ int main() {
     std::cout << "-- на 0: ";
     lo.print();
     std::cout << "\n";
+
+    std::cout << "4. Арифметическое присваивание\n";
+    RGBColor a (100, 100, 100);
+    const RGBColor b(50, 200, 255);
+    std::cout << "a = ";
+    a.print();
+    std::cout << "b = ";
+    b.print();
+    RGBColor tmp= a;
+    tmp += b;
+    std::cout << "a += b: ";
+    tmp.print();
+    tmp = a;
+    tmp -= b;
+    std::cout << "a -= b: ";
+    tmp.print();
+    tmp = a;
+    tmp *= b;
+    std::cout << "a *= b: ";
+    tmp.print();
+    tmp = a;
+    tmp /= b;
+    std::cout << "a /= b: ";
+    tmp.print();
+    tmp = a;
+    tmp /= RGBColor(0, 0, 0);
+    std::cout << "a /= (0,0,0): ";
+    tmp.print();
+    std::cout << "\n";
     return 0;
 }
