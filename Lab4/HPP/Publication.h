@@ -2,6 +2,7 @@
 #define LAB4_PUBLICATION_H
 #include <string>
 #include <vector>
+#include <iostream>
 class Publication {
 protected:
     std::string title;
@@ -15,7 +16,7 @@ public:
         return "Publication";
     }
     Publication(const Publication& other);
-    Publication(const std::string& title, const std::string& isbn);
+    Publication(const std::string& title_, const std::string& isbn_);
     Publication& operator=(const Publication& other);
     virtual ~Publication();
     static Publication* findByISBN(std::string);
