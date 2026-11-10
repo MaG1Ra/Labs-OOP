@@ -1,7 +1,7 @@
 #ifndef LAB4_BOOK_H
 #define LAB4_BOOK_H
 #include "PrintedPublication.h"
-class Book : virtual public PrintedPublication {
+class Book : public PrintedPublication {
     std::string author;
 public:
     Book(const std::string& title_, const std::string& isbn_, int pages_, const std::string& publisher_, const std::string& author_);
